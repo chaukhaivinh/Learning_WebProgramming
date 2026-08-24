@@ -1,0 +1,24 @@
+﻿@model LTW02_Bai02.Models.SachViewModel
+@{
+    ViewBag.Title = "CuaHangSach";
+    //Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+<h2 class="text-center">CỬA HÀNG SÁCH</h2>
+<div class="container">
+    <div class="row">
+        @foreach (var s in Model.DS_Sach)
+            {
+                <div class="col-3 text-center mb-4">
+                    <div style="border:1px solid #ddd; padding:10px">
+                        <a href="/Sach/ChiTietSach?ID=@s.ID">
+                            <img src="~/Content/Images/@s.CoverPhoto" style="height:180px" />
+                        </a>
+                        <h6 class="mt-2" style="font-size: 14px;">@s.Name</h6>
+                        <p style="color: red; font-size: 14px; margin-bottom: 5px;">@s.Price VNĐ</p>
+                        <button class="btn btn-danger btn-sm" style="width:100%">🛒 CHỌN MUA</button>
+                    </div>
+                </div>
+            }
+    </div>
+</div>
+

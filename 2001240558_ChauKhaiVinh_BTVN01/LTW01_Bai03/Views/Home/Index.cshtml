@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/Layout_Page.cshtml";
+}
+<div class="box-title bg-secondary text-white p-2">
+    <h3 class="mb-0" style="font-size: 20px; font-weight: bold; text-transform: uppercase;">SẢN PHẨM MỚI</h3>
+    <small style="opacity: 0.8;">Hiển thị chi tiết sản phẩm mới của cửa hàng</small>
+</div>
+
+<div class="row">
+    @for (int i = 1; i <= 4; i++)
+    {
+        <div class="col-md-3 mb-4">
+            <div class="card h-100 text-center shadow-sm">
+                <!-- Bạn có thể thay thế nguồn ảnh bằng ảnh thật trong thư mục của bạn -->
+                <img src="https://via.placeholder.com/200x150?text=San+Pham+@i" class="card-img-top p-2" alt="Sản phẩm @i">
+                <div class="card-body d-flex flex-column justify-content-between p-2">
+                    <h6 class="card-title font-weight-bold text-dark mb-1">Sản phẩm @i</h6>
+                    <p class="card-text text-muted mb-3" style="font-size: 12px; line-height: 1.4;">
+                        Some quick example text to build on the card title and make up the bulk of the card's content.
+                    </p>
+                    <button class="btn btn-sm btn-primary w-100 font-weight-bold">Chọn mua</button>
+                </div>
+            </div>
+        </div>
+    }
+</div>

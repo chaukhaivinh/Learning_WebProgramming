@@ -1,0 +1,14 @@
+﻿@model LTW02_BaiMau.Models.PhongBanViewModel
+@{
+    ViewBag.Title = "Phong";
+}
+
+<h2>Phòng</h2>
+<div>
+    @foreach (var p in Model.DS_PhongBan)
+            {
+                <p>@p.ID</p>
+                <p>@p.Name</p>
+            }
+</div>
+

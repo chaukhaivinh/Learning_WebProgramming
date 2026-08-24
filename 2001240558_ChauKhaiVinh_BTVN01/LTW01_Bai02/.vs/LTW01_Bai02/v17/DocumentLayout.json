@@ -1,0 +1,84 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\L\u1EACP TR\u00CCNH WEB\\Buoi1\\2001240558_ChauKhaiVinh_BTVN01\\LTW01_Bai02\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{017A82F2-AE87-4D32-BE72-1C74075B71D0}|..\\LTW01_Bai04\\LTW01_Bai04.csproj|d:\\l\u1EADp tr\u00ECnh web\\buoi1\\2001240558_chaukhaivinh_btvn01\\ltw01_bai04\\views\\shared\\layout_page.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{017A82F2-AE87-4D32-BE72-1C74075B71D0}|..\\LTW01_Bai04\\LTW01_Bai04.csproj|d:\\l\u1EADp tr\u00ECnh web\\buoi1\\2001240558_chaukhaivinh_btvn01\\ltw01_bai04\\views\\shared\\header.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{017A82F2-AE87-4D32-BE72-1C74075B71D0}|..\\LTW01_Bai04\\LTW01_Bai04.csproj|d:\\l\u1EADp tr\u00ECnh web\\buoi1\\2001240558_chaukhaivinh_btvn01\\ltw01_bai04\\views\\shared\\footer.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{017A82F2-AE87-4D32-BE72-1C74075B71D0}|..\\LTW01_Bai04\\LTW01_Bai04.csproj|d:\\l\u1EADp tr\u00ECnh web\\buoi1\\2001240558_chaukhaivinh_btvn01\\ltw01_bai04\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\L\u1EACP TR\u00CCNH WEB\\Buoi1\\2001240558_ChauKhaiVinh_BTVN01\\LTW01_Bai04\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "..\\LTW01_Bai04\\Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\L\u1EACP TR\u00CCNH WEB\\Buoi1\\2001240558_ChauKhaiVinh_BTVN01\\LTW01_Bai04\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "..\\LTW01_Bai04\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-08-22T16:17:07.604Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Footer.cshtml",
+              "DocumentMoniker": "D:\\L\u1EACP TR\u00CCNH WEB\\Buoi1\\2001240558_ChauKhaiVinh_BTVN01\\LTW01_Bai04\\Views\\Shared\\Footer.cshtml",
+              "RelativeDocumentMoniker": "..\\LTW01_Bai04\\Views\\Shared\\Footer.cshtml",
+              "ToolTip": "D:\\L\u1EACP TR\u00CCNH WEB\\Buoi1\\2001240558_ChauKhaiVinh_BTVN01\\LTW01_Bai04\\Views\\Shared\\Footer.cshtml",
+              "RelativeToolTip": "..\\LTW01_Bai04\\Views\\Shared\\Footer.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-08-22T16:16:15.352Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Header.cshtml",
+              "DocumentMoniker": "D:\\L\u1EACP TR\u00CCNH WEB\\Buoi1\\2001240558_ChauKhaiVinh_BTVN01\\LTW01_Bai04\\Views\\Shared\\Header.cshtml",
+              "RelativeDocumentMoniker": "..\\LTW01_Bai04\\Views\\Shared\\Header.cshtml",
+              "ToolTip": "D:\\L\u1EACP TR\u00CCNH WEB\\Buoi1\\2001240558_ChauKhaiVinh_BTVN01\\LTW01_Bai04\\Views\\Shared\\Header.cshtml",
+              "RelativeToolTip": "..\\LTW01_Bai04\\Views\\Shared\\Header.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-08-22T16:15:18.953Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Layout_Page.cshtml",
+              "DocumentMoniker": "D:\\L\u1EACP TR\u00CCNH WEB\\Buoi1\\2001240558_ChauKhaiVinh_BTVN01\\LTW01_Bai04\\Views\\Shared\\Layout_Page.cshtml",
+              "RelativeDocumentMoniker": "..\\LTW01_Bai04\\Views\\Shared\\Layout_Page.cshtml",
+              "ToolTip": "D:\\L\u1EACP TR\u00CCNH WEB\\Buoi1\\2001240558_ChauKhaiVinh_BTVN01\\LTW01_Bai04\\Views\\Shared\\Layout_Page.cshtml",
+              "RelativeToolTip": "..\\LTW01_Bai04\\Views\\Shared\\Layout_Page.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-08-22T16:10:32.397Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

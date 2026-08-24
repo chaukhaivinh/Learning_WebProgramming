@@ -1,0 +1,81 @@
+﻿
+@{
+    ViewBag.Title = "DangKy";
+    Layout = "~/Views/Shared/Layout_Page.cshtml";
+}
+<div class="card shadow-sm border-0">
+    <div class="card-header bg-secondary text-white py-2 d-flex align-items-center">
+        <span class="mr-2" style="font-size: 18px;">🌐</span>
+        <h4 class="mb-0" style="font-size: 18px; font-weight: bold;">Đăng ký thành viên!</h4>
+    </div>
+    <div class="card-body bg-light">
+        <form action="#" method="post">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <input type="text" class="form-control form-control-sm" placeholder="Họ" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <input type="text" class="form-control form-control-sm" placeholder="Tên" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="email" class="form-control form-control-sm" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control form-control-sm" placeholder="Mật khẩu" required>
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control form-control-sm" placeholder="Nhập lại mật khẩu" required>
+            </div>
+
+            <!-- Trường chọn ngày sinh -->
+            <div class="form-group">
+                <label class="font-weight-bold text-dark mb-1" style="font-size: 14px;">Ngày sinh</label>
+                <div class="form-row">
+                    <div class="col-md-4">
+                        <select class="form-control form-control-sm" required>
+                            <option value="">Ngày</option>
+                            @for (int i = 1; i <= 31; i++)
+                            {
+                                <option value="@i">@i</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <select class="form-control form-control-sm" required>
+                            <option value="">Tháng</option>
+                            @for (int i = 1; i <= 12; i++)
+                            {
+                                <option value="@i">Tháng @i</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <select class="form-control form-control-sm" required>
+                            <option value="">Năm</option>
+                            @for (int i = DateTime.Now.Year; i >= 1950; i--)
+                            {
+                                <option value="@i">@i</option>
+                            }
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trường chọn giới tính -->
+            <div class="form-group">
+                <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" id="genderNam" name="gender" class="custom-control-input" value="Nam" checked>
+                    <label class="custom-control-label text-dark" for="genderNam" style="font-size: 14px;">Nam</label>
+                </div>
+                <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" id="genderNu" name="gender" class="custom-control-input" value="Nữ">
+                    <label class="custom-control-label text-dark" for="genderNu" style="font-size: 14px;">Nữ</label>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-sm w-100 font-weight-bold py-2">Đăng ký</button>
+        </form>
+    </div>
+</div>
+

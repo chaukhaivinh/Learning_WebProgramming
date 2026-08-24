@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "Mau01";
+}
+<body>
+    <div>
+        @{
+            if(ViewBag.DuLieu != null)
+            {
+                foreach(var i in ViewBag.DuLieu)
+                {
+                    @i <br/>
+                }
+            }
+        }
+    </div>
+</body>
+

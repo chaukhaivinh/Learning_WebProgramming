@@ -1,0 +1,22 @@
+﻿@using LTW02_BaiMau.Models
+@{
+    ViewBag.Title = "Employee";
+    var e = ViewData["e"] as Employee;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Bài mẫu 3</title>
+</head>
+<body>
+    y>
+    <div>
+        <h2>Employee Detail</h2>
+        <p>Employee ID: <b>@e.ID</b></p>
+        <p>Employee Name: <b>@e.Name</b></p>
+        <p>Employee Address: <b>@e.Address</b></p>
+        <p>Employee Salary: <b>@e.Salary</b></p>
+    </div>
+</body>
+</html>

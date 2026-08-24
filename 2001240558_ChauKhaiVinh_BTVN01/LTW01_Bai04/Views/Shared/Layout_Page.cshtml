@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>@ViewBag.Title - Agency Bootstrap Template</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="~/assets/favicon.ico" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+    <!-- Font Awesome icons (Phiên bản miễn phí qua CDN)-->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+
+    <!-- Link CSS của Theme gốc (sử dụng dấu ngã ~/ để tự động nhận đường dẫn tương đối) -->
+    <link href="~/css/styles.css" rel="stylesheet" />
+</head>
+<body id="page-top">
+
+    <!-- Nhúng Thành phần Header (Thanh điều hướng & Banner lớn) -->
+    @Html.Partial("Header")
+
+    <!-- Vùng hiển thị nội dung động của trang con (ví dụ: Trang Service) -->
+    <main>
+        @RenderBody()
+    </main>
+
+    <!-- Nhúng Thành phần Footer (Bản quyền & Mạng xã hội) -->
+    @Html.Partial("Footer")
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- File Script xử lý hiệu ứng cuộn trang của Theme -->
+    <script src="~/js/scripts.js"></script>
+</body>
+</html>
