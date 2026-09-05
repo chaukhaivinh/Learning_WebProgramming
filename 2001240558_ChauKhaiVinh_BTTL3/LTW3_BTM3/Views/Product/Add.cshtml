@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "Add";
+}
+
+<h2>Thêm sản phẩm mới</h2>
+<form method="post" action="/Product/Add">
+    <input type="text" name="Name" placeholder="Nhập vào tên sản phẩm" />
+    <input type="text" name="Price" placeholder="Nhập vào giá sản phẩm" />
+    <button type="submit">Thêm</button>
+
+    <p>@ViewBag.Message</p>
+</form>
+
+
