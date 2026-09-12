@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.37614.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LTW03_BTTL4", "LTW03_BTTL4.csproj", "{654453C7-CFA3-4F7B-B483-95DC730BBE31}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LTW03_BTTL5", "..\LTW03_BTTL5\LTW03_BTTL5.csproj", "{CA8E5F6B-4391-415D-808E-4D54B1A4DCF7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{654453C7-CFA3-4F7B-B483-95DC730BBE31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{654453C7-CFA3-4F7B-B483-95DC730BBE31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{654453C7-CFA3-4F7B-B483-95DC730BBE31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{654453C7-CFA3-4F7B-B483-95DC730BBE31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA8E5F6B-4391-415D-808E-4D54B1A4DCF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA8E5F6B-4391-415D-808E-4D54B1A4DCF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA8E5F6B-4391-415D-808E-4D54B1A4DCF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA8E5F6B-4391-415D-808E-4D54B1A4DCF7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {568BDBF8-5A10-41F0-94F9-40B4EC3DB115}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,28 @@
+﻿@model List<LTW04_BTTL2.Models.Comment>
+
+<div class="bg-light p-3 rounded h-100">
+    <h5 class="mb-4">Bình luận khách hàng</h5>
+
+    @foreach (var c in Model)
+    {
+        <div class="d-flex mb-3 border-bottom pb-2">
+            <img src="@c._Avatar" class="rounded-circle me-3" width="50" height="50" alt="Avatar" />
+            <div>
+                <h6 class="mb-0 text-primary">@c._UserName <small class="text-muted fw-normal">- @c._DateComment.ToString("dd/MM/yyyy")</small></h6>
+                <p class="mb-1 text-dark" style="font-size: 14px;">@c._CommentContent</p>
+                <div class="text-warning" style="font-size: 12px;">
+                    @for (int i = 1; i <= 5; i++)
+                    {
+                        if (i <= c._StarRating)
+                        {<span>★</span> }
+                        else
+                        { <span>☆</span>}
+                    }
+                </div>
+            </div>
+        </div>
+    }
+    <div class="text-end">
+        <a href="#" class="text-decoration-none">Xem tất cả ...</a>
+    </div>
+</div>

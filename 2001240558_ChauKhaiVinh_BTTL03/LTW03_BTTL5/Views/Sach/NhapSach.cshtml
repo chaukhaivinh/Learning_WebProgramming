@@ -1,0 +1,35 @@
+﻿@{
+    ViewBag.Title = "Nhập sách vào kho";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 style="color: blue; text-align: center; font-weight: bold;">NHẬP SÁCH VÀO KHO</h2>
+
+@using (Html.BeginForm("NhapSach", "Sach", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div style="max-width: 500px; margin: 0 auto;">
+        <div class="form-group mb-3">
+            <label>Mã Sách:</label>
+            <input type="number" name="maSach" class="form-control" required />
+        </div>
+
+        <div class="form-group mb-3">
+            <label>Tên sách:</label>
+            <input type="text" name="tenSach" class="form-control" required />
+        </div>
+
+        <div class="form-group mb-3">
+            <label>Giá:</label>
+            <input type="number" name="gia" class="form-control" step="1000" required />
+        </div>
+
+        <div class="form-group mb-3">
+            <label>Ảnh Bìa:</label>
+            <input type="file" name="fileAnhBia" class="form-control" accept="image/*" required />
+        </div>
+
+        <div style="text-align: center; margin-top: 20px;">
+            <button type="submit" class="btn btn-primary px-4">NHẬP</button>
+        </div>
+    </div>
+}

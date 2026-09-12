@@ -1,0 +1,22 @@
+﻿@model LTW03_BTTL5.Models.Sach
+
+@{
+    ViewBag.Title = "Xác nhận nhập sách";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 style="color: green; text-align: center; font-weight: bold;">KẾT QUẢ NHẬP SÁCH VÀO KHO</h2>
+
+<div class="card" style="max-width: 500px; margin: 20px auto; padding: 20px; border: 1px solid #ddd;">
+    <p><strong>Mã sách:</strong> @Model.MaSach</p>
+    <p><strong>Tên sách:</strong> @Model.TenSach</p>
+    <p><strong>Giá:</strong> @Model.Gia.ToString("N0") VNĐ</p>
+    <p><strong>Hình ảnh bìa:</strong></p>
+    <div>
+        <img src="~/Images/@Model.AnhBia" alt="Ảnh bìa" style="max-width: 200px; border: 1px solid #ccc; padding: 5px;" />
+    </div>
+
+    <div style="margin-top: 15px;">
+        @Html.ActionLink("Thêm sách mới", "NhapSach", "Sach", null, new { @class = "btn btn-secondary" })
+    </div>
+</div>

@@ -1,0 +1,22 @@
+﻿@model LTW04_BTTL2.Models.FeedBack
+<div class="bg-light p-3 rounded mt-4">
+    <h5>⭐ Tổng quan đánh giá</h5>
+    <p class="mb-2"><strong>@Model._Average / 5</strong> (Tổng: @Model._TotalCount đánh giá)</p>
+
+    @for (int i = 5; i >= 1; i--)
+    {
+        // Tính phần trăm để set độ rộng cho thanh div
+        int count = Model._StarCount[i];
+        double percent = Model._TotalCount > 0 ? (count * 100.0) / Model._TotalCount : 0;
+
+        <div class="d-flex align-items-center mb-1">
+            <span class="me-2" style="width: 30px;">@i ★</span>
+            <!-- Khung xám chứa thanh tiến trình -->
+            <div class="flex-grow-1 bg-secondary bg-opacity-25" style="height: 10px; border-radius: 5px;">
+                <!-- Div tô màu vàng tỷ lệ % theo số sao -->
+                <div class="bg-warning" style="width: @percent%; height: 10px; border-radius: 5px;"></div>
+            </div>
+            <span class="ms-2" style="width: 30px; text-align: right;">@count</span>
+        </div>
+    }
+</div>
