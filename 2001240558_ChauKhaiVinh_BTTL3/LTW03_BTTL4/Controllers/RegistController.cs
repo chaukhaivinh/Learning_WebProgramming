@@ -1,4 +1,4 @@
-﻿using LTW03_BTTL4.Models;
+using LTW03_BTTL4.Models;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -46,7 +46,7 @@ namespace LTW03_BTTL4.Controllers
             var info = Session["ThongTinDangKy"] as Infomation;
             if (info == null)
             {
-                return RedirectToAction("Index");
+                return RedirectToAction("RegisterForm");
             }
             return View(info);
         }

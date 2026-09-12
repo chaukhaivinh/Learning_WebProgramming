@@ -1,0 +1,77 @@
+@model LTW03_BTTL4.Models.Infomation
+
+@{
+    ViewBag.Title = "Màn hình xác nhận thông tin đăng ký";
+
+    // Chuyển đổi mã khóa học sang tên khóa học
+    string courseName = "";
+    switch (Model.SelectCourse)
+    {
+        case 1: courseName = "1. Html CSS Bootstrap"; break;
+        case 2: courseName = "2. ASP.Net MVC"; break;
+        case 3: courseName = "3. Javascript nâng cao"; break;
+        case 4: courseName = "4. Lập trình Web API"; break;
+        default: courseName = "Chưa chọn khóa học"; break;
+    }
+
+    // Danh sách nguồn thông tin đã chọn
+    List<string> knownBy = new List<string>();
+    if (Model.Check1) { knownBy.Add("Television"); }
+    if (Model.Check2) { knownBy.Add("Website"); }
+    if (Model.Check3) { knownBy.Add("Newspaper"); }
+    string knownByText = knownBy.Count > 0 ? string.Join(", ", knownBy) : "Không có";
+}
+
+<div class="container" style="max-width: 600px; margin-top: 30px;">
+    <h2 style="font-weight: bold; text-align: center; color: #0275d8; margin-bottom: 20px;">XÁC NHẬN THÔNG TIN ĐĂNG KÝ</h2>
+
+    <div style="border: 1px solid #ccc; padding: 20px; border-radius: 5px; background-color: #f9f9f9;">
+        <table class="table table-bordered table-striped" style="margin-bottom: 20px;">
+            <tr>
+                <th style="width: 35%;">Họ và tên:</th>
+                <td>@Model.FullName</td>
+            </tr>
+            <tr>
+                <th>Mã sinh viên:</th>
+                <td>@Model.IdStudent</td>
+            </tr>
+            <tr>
+                <th>Email:</th>
+                <td>@Model.Email</td>
+            </tr>
+            <tr>
+                <th>Hình ảnh:</th>
+                <td>
+                    @if (!string.IsNullOrEmpty(Model.FileImage))
+                    {
+                        <img src="@Url.Content("~/Content/Images/" + Model.FileImage)" alt="Avatar" style="max-width: 150px; height: auto; border: 1px solid #ddd; padding: 3px; border-radius: 4px;" />
+                    }
+                    else
+                    {
+                        <span>Chưa có ảnh</span>
+                    }
+                </td>
+            </tr>
+            <tr>
+                <th>Ghi chú:</th>
+                <td>@(string.IsNullOrEmpty(Model.Note) ? "Không có" : Model.Note)</td>
+            </tr>
+            <tr>
+                <th>Biết qua (Known by):</th>
+                <td>@knownByText</td>
+            </tr>
+            <tr>
+                <th>Thời gian học (Work Time):</th>
+                <td>@Model.ChooseWorkTime</td>
+            </tr>
+            <tr>
+                <th>Khóa học đã chọn:</th>
+                <td>@courseName</td>
+            </tr>
+        </table>
+
+        <div style="text-align: center;">
+            <a href="@Url.Action("RegisterForm", "Regist")" class="btn btn-primary">Đăng ký lại</a>
+        </div>
+    </div>
+</div>
