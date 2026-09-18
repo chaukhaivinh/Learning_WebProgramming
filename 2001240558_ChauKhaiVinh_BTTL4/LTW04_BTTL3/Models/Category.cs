@@ -7,7 +7,15 @@ namespace LTW04_BTTL3.Models
 {
     public class Category
     {
-        public int CategoryId { get; set; }
-        public string CategoryName { get; set; }
+        public int MaLoai { get; set; }
+        public string TenLoai { get; set; }
+
+        public Category() { }
+
+        public Category(int maLoai, string tenLoai)
+        {
+            MaLoai = maLoai;
+            TenLoai = tenLoai;
+        }
     }
 }

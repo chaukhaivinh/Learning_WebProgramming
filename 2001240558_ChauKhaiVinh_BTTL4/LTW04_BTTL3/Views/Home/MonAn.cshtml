@@ -1,0 +1,27 @@
+﻿@model List<LTW04_BTTL3.Models.Product>
+
+@{
+    ViewBag.Title = "Danh sách món ăn";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    @foreach (var item in Model)
+    {
+        <div class="col">
+            <div class="card h-100 text-center shadow-sm" style="border-radius: 10px; border: none;">
+                <div class="card-body d-flex flex-column justify-content-between" style="padding: 25px;">
+                    <h5 class="card-title font-weight-bold" style="font-size: 1.25rem; color: #0f172a;">
+                        @item.TenSP
+                    </h5>
+                    <p class="card-text text-muted my-2">
+                        Giá: <span style="color: #059669; font-weight: bold;">@item.Gia.ToString("N0")đ</span>
+                    </p>
+                    <div>
+                        <button class="btn btn-success px-4" style="border-radius: 6px;">Thêm vào giỏ</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>

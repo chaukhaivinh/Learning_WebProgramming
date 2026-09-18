@@ -10,22 +10,21 @@ namespace LTW04_BTTL3.Models
         public List<Category> Categories { get; set; }
         public List<Product> Products { get; set; }
 
-        // Constructor tự động tạo sẵn dữ liệu khi class Data được gọi
         public Data()
         {
             Categories = new List<Category>
             {
-                new Category { CategoryId = 1, CategoryName = "Nước uống" },
-                new Category { CategoryId = 2, CategoryName = "Ăn vặt" },
-                new Category { CategoryId = 3, CategoryName = "Giải trí" }
+                new Category(1, "Nước uống"),
+                new Category(2, "Ăn vặt"),
+                new Category(3, "Giải trí")
             };
-
             Products = new List<Product>
             {
-                new Product{ProductName="Cà phê đen",Price=40000,CategoryId=1},
-                new Product{ProductName="Cà sữa",Price=50000,CategoryId=2},
-                new Product{ProductName="Matcha Latte",Price=75000,CategoryId=3},
-                new Product{ProductName="Hồng trà sữa chuối",Price=55000,CategoryId=4},
+                new Product("Trà sữa trân châu", 25000, 1),
+                new Product("Bánh tráng trộn", 20000, 2),
+                new Product("Tô tượng", 35000, 3),
+                new Product("Hồng trà tắc", 18000, 1),
+                new Product("Xoài lắc", 22000, 2)
             };
         }
     }

@@ -9,15 +9,16 @@ namespace LTW04_BTTL3.Controllers
 {
     public class HomeController : Controller
     {
-        Data db = new Data();
+        private Data db = new Data();
         public ActionResult Index()
         {
             return View();
         }
         
         
-        public ActionResult Menu()
+        public ActionResult MonAn()
         {
+
             return View(db.Products);
         }
 
