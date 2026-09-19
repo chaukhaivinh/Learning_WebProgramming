@@ -1,0 +1,39 @@
+﻿@model IEnumerable<LTW05_BTM1.Models.Employee>
+
+@{
+    ViewBag.Title = "HienThiNhanVien";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Danh sách Nhân viên</h2>
+<p>
+    @Html.ActionLink("Thêm mới nhân viên", "Create")
+</p>
+<table class="table table-striped border">
+    <thead class="thead-dark">
+        <tr>
+            <th>
+                Mã nhân viên
+            </th>
+            <th>
+                Tên nhân viên
+            </th>
+            <th>
+                Giới tính
+            </th>
+            <th>
+                Tỉnh/Thành phố
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(x => item.ID)</td>
+            <td>@Html.DisplayFor(x => item.Name)</td>
+            <td>@Html.DisplayFor(x => item.Gender)</td>
+            <td>@Html.DisplayFor(x => item.City)</td>
+            <td></td>
+        </tr>
+    }
+</table>
