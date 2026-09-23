@@ -1,0 +1,33 @@
+﻿@model IEnumerable<LTW_BTTL2.Models.Employee>
+
+@{
+    ViewBag.Title = "XemNhanVien";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+
+}
+<h2>Danh sách nhân viên</h2>
+<hr />
+<table class="table table-bordered" style="margin-top: 15px;">
+    <thead style="background-color: blue; color: white;">
+        <tr>
+            <th>Mã NV</th>
+            <th>Họ Tên</th>
+            <th>Giới tính</th>
+            <th>Thành Phố</th>
+        </tr>
+    </thead>
+    @foreach (var nv in Model) 
+    { 
+        <tr>
+            <td>@nv.ID</td>
+            <td>@nv.DisplayName</td>
+            <td>@nv.Gender</td>
+            <td>@nv.City</td>
+        </tr>
+    }
+</table>
+<p style="margin-top:15px">
+    @Html.ActionLink("Trở về danh sách phòng ban", "HienThiPhongBan")
+</p>
+

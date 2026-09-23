@@ -9,7 +9,7 @@ namespace LTW05_BTM1.Models
 {
     public class Data
     {
-        static string strcon = "Data Source=A204PC31\\CSSQL08;database=QL_NhanVien;Integrated Security=True";
+        static string strcon = "Data Source=DESKTOP-I4MVS04;database=QL_NhanVien;Integrated Security=True";
         SqlConnection con = new SqlConnection(strcon);
         public List<Employee> DS_NhanVien = new List<Employee>();
         public Data()

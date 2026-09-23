@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LTW05_BTM1", "LTW05_BTM1\LT
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LTW05_BTTL2", "LTW_BTTL2\LTW05_BTTL2.csproj", "{BC59A219-8B04-47F6-AEC2-BE96A063FE59}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LTW05_BTTL3", "LTW05_BTTL3\LTW05_BTTL3.csproj", "{206E50BF-14CD-4160-A9AB-DD3EA67E1031}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{BC59A219-8B04-47F6-AEC2-BE96A063FE59}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BC59A219-8B04-47F6-AEC2-BE96A063FE59}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BC59A219-8B04-47F6-AEC2-BE96A063FE59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{206E50BF-14CD-4160-A9AB-DD3EA67E1031}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{206E50BF-14CD-4160-A9AB-DD3EA67E1031}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{206E50BF-14CD-4160-A9AB-DD3EA67E1031}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{206E50BF-14CD-4160-A9AB-DD3EA67E1031}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

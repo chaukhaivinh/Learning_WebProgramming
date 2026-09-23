@@ -32,8 +32,26 @@ namespace LTW_BTTL2.Controllers
         Data csdl=new Data();
         public ActionResult HienThiPhongBan() 
         {
-            List<PhongBan> list = csdl.DS_PhongBan;
+            List<Department> list = csdl.DS_PhongBan;
             return View(list);
+        }
+        public ActionResult Details(int id)
+        {
+            Department dept = csdl.GetDepartmentByID(id);
+            if (dept == null)
+            {
+                return HttpNotFound();
+            }
+            return View(dept);
+        }
+        public ActionResult XemNhanVien(int Id)
+        {
+            Department dept = csdl.DS_PhongBan.FirstOrDefault(p => p.ID == Id);
+            ViewBag.DeptName = dept != null ? dept.RoomName : "";
+
+            
+            List<Employee> listNV = csdl.ThietLap_DSNV(Id);
+            return View(listNV);
         }
     }
 }

@@ -1,0 +1,35 @@
+﻿@model IEnumerable<LTW05_BTTL2.Models.Department>
+
+@{
+    ViewBag.Title = "View";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Danh sách phòng ban</h2>
+<table class="table table-striped border">
+    <thead class="thead-dark">
+        <tr>
+            <th>
+                Mã phòng ban
+            </th>
+            <th>
+                Tên phòng ban
+            </th>
+        </tr>
+    </thead>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(x => item.ID)</td>
+            <td>@Html.DisplayFor(x => item.RoomName)</td>
+            <td>
+                @Html.ActionLink("Xem chi tiết","Details",new {id=item.ID})
+            </td>
+            <td>
+                @Html.ActionLink("Xem nhân viên", "XemNhanVien", new { id = item.ID })
+            </td>
+        </tr>
+    }
+</table>
+
+
+

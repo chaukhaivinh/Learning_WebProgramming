@@ -1,0 +1,18 @@
+﻿@model LTW05_BTTL2.Models.Department
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2 style="color: blue; font-weight: bold; text-transform: uppercase;">CHI TIẾT PHÒNG BAN</h2>
+<hr />
+
+<div style="font-size: 16px; line-height: 2;">
+    <p><strong>Mã PB:</strong> <span style="background-color: yellow; padding: 2px 6px;">@Model.ID</span></p>
+    <p><strong>TênPB:</strong> <span style="background-color: yellow; padding: 2px 6px;">@Model.RoomName</span></p>
+    <p><strong>Số NV:</strong> <span style="background-color: yellow; padding: 2px 6px;">@Model.EmployeeCount</span></p>
+</div>
+
+<p style="margin-top: 15px;">
+    @Html.ActionLink("Trở về danh sách", "HienThiPhongBan")
+</p>
