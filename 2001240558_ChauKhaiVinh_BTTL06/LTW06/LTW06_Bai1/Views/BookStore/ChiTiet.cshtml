@@ -1,0 +1,25 @@
+﻿@model LTW06_Bai1.Models.Product
+
+@{
+    ViewBag.Title = "ChiTiet";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="card shadow border-secondary">
+    <div class="card-header font-weight-bold" style="background-color: #163300; color: #9FE870 ">
+        MÃ SẢN PHẨM: @Model.ID
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-4 text-center">
+                <img src="~/@Model.Image" style="max-width: 100%; height: 220px;" class="img-thumbnail" />
+            </div>
+            <div class="col-md-8">
+                <h4 class=" font-weight-bold" style="color: #9FE870">@Model.DisplayName</h4>
+                <p><strong>Mô tả:</strong> @Model.Note</p>
+                <h5 class="text-danger font-weight-bold">Giá bán: @Model.Price.ToString("N0") VNĐ</h5>
+                <button class="btn mt-3" style="background-color: #163300; color: #9FE870 ">Thêm vào giỏ hàng</button>
+            </div>
+        </div>
+    </div>
+</div>
+

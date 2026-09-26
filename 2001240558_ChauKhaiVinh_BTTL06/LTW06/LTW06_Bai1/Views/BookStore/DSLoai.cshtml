@@ -1,0 +1,19 @@
+﻿@model IEnumerable<LTW06_Bai1.Models.ProductType>
+
+@{
+    Layout = null;
+}
+
+<div class="list-group shadow-sm">
+    <!-- SỬA LỖI 2: Đổi "DSLoai" thành "DSSP" để nhấp vào tiêu đề sẽ hiển thị tất cả sản phẩm -->
+    <a href="@Url.Action("DSSP", "BookStore")" class="list-group-item list-group-item-action font-weight-bold" style="background-color:#163300;color:#9FE870">
+        DANH MỤC SÁCH
+    </a>
+
+    @foreach (var item in Model)
+    {
+        <a href="@Url.Action("DSSP", "BookStore", new { _TypeID = item.ID })" class="list-group-item list-group-item-action">
+            @item.DisplayName
+        </a>
+    }
+</div>

@@ -1,0 +1,44 @@
+﻿@model IEnumerable<LTW06_Bai1.Models.Product>
+
+@{
+    ViewBag.Title = "TimKiem";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="card p-3 mb-4 bg-light shadow-sm">
+    <h4 class="font-weight-bold text-center " style="color: #9FE870">TÌM KIẾM SẢN PHẨM NÂNG CAO</h4>
+    <form method="get" action="@Url.Action("TimKiem", "BookStore")">
+        <div class="form-row">
+            <div class="col-md-4 mb-2">
+                <label>Tên sản phẩm:</label>
+                <input type="text" name="kw" value="@ViewBag.KW" class="form-control" placeholder="Nhập từ khóa..." />
+            </div>
+            <div class="col-md-3 mb-2">
+                <label>Từ giá (VNĐ):</label>
+                <input type="number" name="giaTu" value="@ViewBag.GiaTu" class="form-control" placeholder="0" />
+            </div>
+            <div class="col-md-3 mb-2">
+                <label>Đến giá (VNĐ):</label>
+                <input type="number" name="giaDen" value="@ViewBag.GiaDen" class="form-control" placeholder="200000" />
+            </div>
+            <div class="col-md-2 mb-2 d-flex align-items-end">
+                <button type="submit" class="btn  btn-block" style="background-color: #163300; color: #9FE870 ">Tìm kiếm</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div class="row">
+    @foreach (var sp in Model)
+    {
+        <div class="col-md-4 mb-3">
+            <div class="card text-center" style="border-color: #163300">
+                <div class="card-body">
+                    <img src="~/@sp.Image" style="height: 140px;" />
+                    <h6 class="font-weight-bold mt-2">@sp.DisplayName</h6>
+                    <p class="text-danger font-weight-bold">@sp.Price.ToString("N0") VNĐ</p>
+                    <a href="@Url.Action("ChiTiet", "BookStore", new { _ID = sp.ID })" class="btn btn-sm btn-info" style="background-color: #163300; color: #9FE870">Chi tiết</a>
+                </div>
+            </div>
+        </div>
+    }
+</div>

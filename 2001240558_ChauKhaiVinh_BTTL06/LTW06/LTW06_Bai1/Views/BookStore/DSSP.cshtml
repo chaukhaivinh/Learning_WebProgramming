@@ -1,0 +1,30 @@
+﻿@model IEnumerable<LTW06_Bai1.Models.Product>
+
+@{
+    ViewBag.Title = "Trang chủ - Danh sách sản phẩm";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3 class="font-weight-bold mb-3 text-uppercase" style="color:#9FE870">Danh sách sản phẩm</h3>
+
+<div class="row">
+    @foreach (var sp in Model)
+    {
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 text-center shadow-sm" style="border-color: #163300">
+                <!-- Tiêu đề sản phẩm -->
+                <div class="card-header font-weight-bold " style="background-color: #163300; color: #9FE870 ">
+                    @sp.DisplayName
+                </div>
+                <div class="card-body">
+                    <img src="~/@sp.Image" style="height: 180px; object-fit: contain;" class="card-img-top mb-2" alt="@sp.DisplayName" />
+                    <p class="card-text text-danger font-weight-bold">Giá: @sp.Price.ToString("N0") VNĐ</p>
+                </div>
+                <div class="card-footer bg-white border-0">
+                    <a href="@Url.Action("ChiTiet", "BookStore", new { _ID = sp.ID })" class="btn btn-sm btn-outline-primary">Chi tiết</a>
+                    <button class="btn btn-sm " style="background-color: #163300; color: #9FE870 ">Chọn mua</button>
+                </div>
+            </div>
+        </div>
+    }
+</div>
