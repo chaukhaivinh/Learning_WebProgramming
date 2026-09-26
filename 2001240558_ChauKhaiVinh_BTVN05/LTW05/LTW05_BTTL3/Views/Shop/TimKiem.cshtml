@@ -1,0 +1,47 @@
+﻿@model IEnumerable<LTW05_BTTL3.Models.Product>
+
+@{
+    ViewBag.Title = "TimKiem";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="text-center" style="margin-bottom: 20px;">
+    <form method="get" action="@Url.Action("TimKiem", "Shop")" class="form-inline style-search" style="display: flex;justify-content:center;align-items:center">
+        <input type="text" name="kw" value="@ViewBag.TuKhoa" placeholder="Nhập tên sản phẩm..." class="form-control" style="width: 300px;" />
+        <button type="submit" class="btn btn-primary">SEARCH</button>
+    </form>
+</div>
+
+<h2 class="text-center" style="font-weight: bold;">TÌM KIẾM SẢN PHẨM</h2>
+
+<table class="table table-bordered" style="margin-top: 15px;">
+    <thead style="background-color: #555; color: white;">
+        <tr>
+            <th>Hình ảnh</th>
+            <th>Mã sản phẩm</th>
+            <th>Tên sản phẩm</th>
+            <th>Đường dẫn</th>
+            <th>Giá</th>
+            <th>Mô tả</th>
+            <th>Mã loại</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr style="background-color: #fcfcf4;">
+                <td><img src="~/@item.Link" style="width: 80px; height: 50px;" /></td>
+                <td>@item.ID</td>
+                <td>@item.DisplayName</td>
+                <td>@item.Link</td>
+                <td>@item.Price.ToString("N0")</td>
+                <td>@item.Describe</td>
+                <td>@item.TypeID</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<h4 class="text-center" style="margin-top: 15px;">
+    <strong>Tổng số sản phẩm : <span style="background-color: yellow; padding: 2px 8px;">@Model.Count()</span></strong>
+</h4>
+

@@ -1,0 +1,53 @@
+﻿@model IEnumerable<LTW05_BTTL3.Models.Product>
+
+@{
+    ViewBag.Title = "SanPhamByLoai";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2 class="text-center" style="font-weight: bold; margin-bottom: 20px;">SẢN PHẨM - LOẠI</h2>
+<div class="row">
+    <div class="col-md-3">
+        <div class="list-group">
+            <a href="@Url.Action("SanPhamByLoai", "Shop")" class="list-group-item active">TẤT CẢ SẢN PHẨM</a>
+            @if (ViewBag.DSLoai != null)
+            {
+                foreach (var l in (List<LTW05_BTTL3.Models.ProductType>)ViewBag.DSLoai)
+                {
+                    <a href="@Url.Action("SanPhamByLoai", "Shop", new { id = l.ID })" class="list-group-item">
+                        @l.DisplayName
+                    </a>
+                }
+            }
+        </div>
+    </div>
+    <div class="col-md-9">
+        <table class="table table-bordered">
+            <thead class="thead-light">
+                <tr>
+                    <th>Hình ảnh</th>
+                    <th>Mã SP</th>
+                    <th>Tên sản phẩm</th>
+                    <th>Giá</th>
+                    <th>Mô tả</th>
+                    <th>Mã loại</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <!-- Chỉnh kích thước hình ảnh 80x50px theo yêu cầu đề bài -->
+                        <td>
+                            <img src="~/@item.Link" style="width: 80px; height: 50px; object-fit: cover;" alt="@item.DisplayName" />
+                        </td>
+                        <td>@item.ID</td>
+                        <td>@item.DisplayName</td>
+                        <td>@item.Price.ToString("N0") VNĐ</td>
+                        <td>@item.Describe</td>
+                        <td>@item.TypeID</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

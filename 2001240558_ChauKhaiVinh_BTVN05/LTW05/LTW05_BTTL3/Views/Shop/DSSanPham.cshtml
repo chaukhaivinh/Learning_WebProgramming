@@ -1,0 +1,43 @@
+﻿@model IEnumerable<LTW05_BTTL3.Models.Product>
+
+@{
+    ViewBag.Title = "DSSanPham";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="text-center" style="font-weight: bold; margin-bottom: 20px;">DANH SÁCH SẢN PHẨM</h2>
+
+@if (Model == null || !Model.Any())
+{
+    <div class="alert alert-warning text-center">
+        Không tìm thấy sản phẩm nào!
+    </div>
+}
+else
+{
+    <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th>Mã sản phẩm</th>
+                <th>Hình ảnh</th>
+                <th>Tên sản phẩm</th>
+                <th>Giá bán</th>
+                <th>Mô tả</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var sp in Model)
+            {
+                <tr>
+                    <td>@sp.ID</td>
+                    <td>
+                        <img src="~/@sp.Link" style="width: 80px; height: 50px; object-fit: cover;" alt="@sp.DisplayName" />
+                    </td>
+                    <td>@sp.DisplayName</td>
+                    <td>@sp.Price.ToString("N0") VNĐ</td>
+                    <td>@sp.Describe</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
