@@ -1,0 +1,38 @@
+﻿@model IEnumerable<LTW08_NhanSu.Models.Employee>
+
+@{
+    ViewBag.Title = "ShowEmplParameter";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2 class="text-primary text-center">DANH SÁCH NHÂN VIÊN THEO PHÒNG BAN</h2>
+<h4 class="text-danger">PHÒNG: @ViewBag.DisplayName</h4>
+
+<table class="table table-bordered table-striped" style="margin-top:15px;">
+    <tr class="bg-primary" style="color:white;">
+        <th>Mã NV</th>
+        <th>Họ Tên</th>
+        <th>Giới tính</th>
+        <th>Thành Phố</th>
+        <th>Thao tác</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ID</td>
+            <td>@item.DisplayName</td>
+            <td>@item.Gender</td>
+            <td>@item.City</td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+            </td>
+        </tr>
+    }
+</table>
+
+<div style="margin-top:15px;">
+    @Html.ActionLink("Go Back Department List", "SideBarDept", null, new { @class = "btn btn-default" })
+</div>
+

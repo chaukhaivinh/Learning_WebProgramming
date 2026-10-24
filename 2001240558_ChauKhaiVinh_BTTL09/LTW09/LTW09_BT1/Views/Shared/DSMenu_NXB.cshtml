@@ -1,0 +1,10 @@
+﻿@model IEnumerable<LTW09_BT1.Models.NhaXuatBan>
+<ul class="nav flex-column border rounded mb-3">
+    @foreach (var nxb in Model)
+    {
+        <li class="nav-item border-bottom">
+            @Html.ActionLink(nxb.TenNXB, "SachTheoNXB", "Books", new { maNXB = nxb.MaNXB }, new { @class = "nav-link text-dark py-2" })
+        </li>
+    }
+</ul>
+

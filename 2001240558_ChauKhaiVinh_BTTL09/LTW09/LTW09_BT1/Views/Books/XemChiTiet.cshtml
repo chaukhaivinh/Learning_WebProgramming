@@ -1,0 +1,58 @@
+﻿@model LTW09_BT1.Models.Sach
+
+@{
+    ViewBag.Title = "XemChiTiet";
+    Layout = "~/Views/Shared/UserLayout.cshtml";
+}
+<h4 class="text-primary border-bottom pb-2 mb-3">THÔNG TIN CHI TIẾT SÁCH</h4>
+
+<div class="row">
+    <div class="col-md-4 text-center">
+        <img src="@Url.Content("~/Images/" + Model.AnhBia)" class="img-fluid border rounded p-1" style="max-height: 280px;" alt="@Model.TenSach" />
+    </div>
+    <div class="col-md-8">
+        <h5 class="text-danger font-weight-bold">@Model.TenSach</h5>
+        <p><strong>Giá bán:</strong> <span class="text-danger font-weight-bold">@String.Format("{0:0,0}", Model.GiaBan) VNĐ</span></p>
+        <p><strong>Chủ đề:</strong> @(Model.ChuDe != null ? Model.ChuDe.TenChuDe : "Đang cập nhật")</p>
+        <p><strong>Nhà xuất bản:</strong> @(Model.NhaXuatBan != null ? Model.NhaXuatBan.TenNXB : "Đang cập nhật")</p>
+        <p><strong>Mô tả:</strong> @Model.MoTa</p>
+        <a href="#" class="btn btn-danger font-weight-bold">Đặt mua</a>
+        @Html.ActionLink("Trở về Trang chủ", "Index", "Books", null, new { @class = "btn btn-secondary ml-2" })
+    </div>
+</div>
+
+<!-- Đề xuất các sản phẩm cùng Chủ đề -->
+@if (ViewBag.CungChuDe != null && ((List<LTW09_BT1.Models.Sach>)ViewBag.CungChuDe).Count > 0)
+{
+    <h5 class="text-success mt-4 border-bottom pb-2">CÁC SẢN PHẨM CÙNG CHỦ ĐỀ</h5>
+    <div class="row">
+        @foreach (var item in (List<LTW09_BT1.Models.Sach>)ViewBag.CungChuDe)
+        {
+            <div class="col-md-3 text-center mb-3">
+                <div class="border p-2 rounded h-100">
+                    <img src="@Url.Content("~/Images/" + item.AnhBia)" style="height:120px; object-fit:contain;" />
+                    <p class="small text-truncate mt-2 font-weight-bold mb-1">@item.TenSach</p>
+                    @Html.ActionLink("Xem chi tiết", "XemChiTiet", new { id = item.MaSach }, new { @class = "btn btn-warning btn-sm" })
+                </div>
+            </div>
+        }
+    </div>
+}
+
+<!-- Đề xuất các sản phẩm cùng Nhà xuất bản -->
+@if (ViewBag.CungNXB != null && ((List<LTW09_BT1.Models.Sach>)ViewBag.CungNXB).Count > 0)
+{
+    <h5 class="text-info mt-4 border-bottom pb-2">CÁC SẢN PHẨM CÙNG NHÀ XUẤT BẢN</h5>
+    <div class="row">
+        @foreach (var item in (List<LTW09_BT1.Models.Sach>)ViewBag.CungNXB)
+        {
+            <div class="col-md-3 text-center mb-3">
+                <div class="border p-2 rounded h-100">
+                    <img src="@Url.Content("~/Images/" + item.AnhBia)" style="height:120px; object-fit:contain;" />
+                    <p class="small text-truncate mt-2 font-weight-bold mb-1">@item.TenSach</p>
+                    @Html.ActionLink("Xem chi tiết", "XemChiTiet", new { id = item.MaSach }, new { @class = "btn btn-info btn-sm" })
+                </div>
+            </div>
+        }
+    </div>
+}

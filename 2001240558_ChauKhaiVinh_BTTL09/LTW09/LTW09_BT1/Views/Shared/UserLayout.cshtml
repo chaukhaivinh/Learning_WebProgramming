@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Nhà Sách Trực Tuyến</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container-fluid mt-3">
+        <div class="row">
+            <!-- Cột Menu Bên Trái (Chiếm 3/12 cột) -->
+            <div class="col-md-3">
+                <h5 class="bg-success text-white p-2 text-center font-weight-bold rounded-top mb-0">CHỦ ĐỀ SÁCH</h5>
+                @Html.Action("DSMenu_ChuDe", "Books")
+
+                <h5 class="bg-success text-white p-2 text-center font-weight-bold rounded-top mb-0">NHÀ XUẤT BẢN</h5>
+                @Html.Action("DSMenu_NXB", "Books")
+            </div>
+
+            <!-- Cột Nội Dung Bên Phải (Chiếm 9/12 cột) -->
+            <div class="col-md-9">
+                <div class="banner mb-3 text-center">
+                    <img src="~/Images/banner.jpg" class="img-fluid rounded border" style="width:100%; max-height:250px; object-fit:cover;" alt="Banner" />
+                </div>
+                <main role="main">
+                    @RenderBody()
+                </main>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+﻿@model IEnumerable<LTW09_BT1.Models.Sach>
+
+@{
+    ViewBag.Title = "SachTheoNXB";
+    Layout = "~/Views/Shared/UserLayout.cshtml";
+}
+<h4 class="text-primary font-weight-bold border-bottom pb-2 mb-3">NHÀ XUẤT BẢN: @ViewBag.TenNXB</h4>
+
+@if (!Model.Any())
+{
+    <div class="alert alert-warning">Không có sách nào thuộc nhà xuất bản này!</div>
+}
+else
+{
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 text-center shadow-sm">
+                    <img src="@Url.Content("~/Images/" + item.AnhBia)" class="card-img-top mx-auto mt-3" style="height:200px; width:auto; object-fit:contain;" />
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title font-weight-bold text-truncate">@item.TenSach</h6>
+                        <p class="card-text text-danger font-weight-bold">Giá: @String.Format("{0:0,0}", item.GiaBan) VNĐ</p>
+                        <div class="mt-auto">
+                            @Html.ActionLink("Xem chi tiết", "XemChiTiet", "BaiTH9", new { id = item.MaSach }, new { @class = "btn btn-info btn-sm" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}

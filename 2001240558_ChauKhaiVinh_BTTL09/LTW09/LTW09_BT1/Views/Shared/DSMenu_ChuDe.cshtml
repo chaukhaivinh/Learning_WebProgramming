@@ -1,0 +1,10 @@
+﻿@model IEnumerable<LTW09_BT1.Models.ChuDe>
+<ul class="nav flex-column border rounded mb-3">
+    @foreach (var cd in Model)
+    {
+        <li class="nav-item border-bottom">
+            @Html.ActionLink(cd.TenChuDe, "SachTheoCD", "Books", new { maCD = cd.MaChuDe }, new { @class = "nav-link text-dark py-2" })
+        </li>
+    }
+</ul>
+
